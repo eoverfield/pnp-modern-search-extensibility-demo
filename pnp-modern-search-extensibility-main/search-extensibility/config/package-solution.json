@@ -1,0 +1,21 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "PnP Modern Search - Extensibility Library",
+    "id": "15454D70-C630-41AF-9B84-2BA64663103C",
+    "version": "1.0.0.11",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "mpnId": "",
+      "name": "Deepa Moorjmalani",
+      "termsOfUseUrl": "",
+      "privacyUrl": "",
+      "websiteUrl": ""
+    }
+  },
+  "paths": {
+    "zippedPackage": "solution/pnp-modern-search-extensibility.sppkg"
+  }
+}
