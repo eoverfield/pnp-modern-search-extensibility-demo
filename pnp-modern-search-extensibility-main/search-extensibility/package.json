@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "private": false,
   "main": "lib/index.js",
+  "engines": {
+    "node": "16.15.0"
+  },
   "scripts": {
     "build": "gulp bundle --ship && gulp package-solution --ship",
     "clean": "gulp clean",

@@ -24,7 +24,7 @@ export class CustomPersonCardComponent extends React.Component<ICustomPersonCard
         super(props);
         this.state = {
             resolvedUserName: ""
-        }
+        };
 
     }
     public async componentDidMount() {
@@ -56,7 +56,7 @@ export class CustomPersonCardComponent extends React.Component<ICustomPersonCard
                         </div>
                     </div>
                 }
-            </div>
+            </div>;
         };
 
         //this.getUserName(this.props.assistantEmail).then(())
@@ -88,14 +88,14 @@ export class CustomPersonCardComponent extends React.Component<ICustomPersonCard
                     displayName = responseJSON.Title;
                     this.setState({
                         resolvedUserName: displayName
-                    })
+                    });
                 });
             } else {
                 response.json().then((responseJSON) => {
                     console.log(responseJSON);
                     this.setState({
                         resolvedUserName: displayName
-                    })
+                    });
                 });
             }
 
@@ -103,7 +103,7 @@ export class CustomPersonCardComponent extends React.Component<ICustomPersonCard
             console.log(error);
             this.setState({
                 resolvedUserName: displayName
-            })
+            });
         });
 
     }

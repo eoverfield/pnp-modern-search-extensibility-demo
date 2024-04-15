@@ -45,6 +45,11 @@ export interface ICustomPersonaComponentProps {
        * Persona card quaternary text
        */
       office?: string;
+
+      /**
+       * Persona card quaternary text
+       */
+        workPhone?: string;
   
       /**
        * Persona card quinary text
@@ -94,6 +99,7 @@ export class CustomPersonaComponent extends React.Component<ICustomPersonaCompon
         //     processedProps = this.props.templateService.processFieldsConfiguration<IBridgespanPersonaComponentProps>(this.props.fieldsConfiguration, this.props.item, this.props.context);
         // }
         console.log("Profile page url" + processedProps.profilePageUrl);
+        console.log("processed props", processedProps);
 
         const persona: IPersonaProps = {
             theme: this.props.themeVariant as ITheme,
@@ -130,6 +136,7 @@ export class CustomPersonaComponent extends React.Component<ICustomPersonaCompon
                 return <div>
                     {/* //email */}
                     <div dangerouslySetInnerHTML={{ __html: this._domPurify.sanitize(processedProps.office) }}></div>
+                    <div dangerouslySetInnerHTML={{ __html: this._domPurify.sanitize(processedProps.workPhone ? processedProps.workPhone : (processedProps.item ? processedProps.item.WorkPhone : "")) }}></div>
 
                 </div>;
             }
